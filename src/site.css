@@ -1,0 +1,20 @@
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--mdc-theme-primary-border-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--mdc-theme-primary);
+    outline: 0 !important;
+    cursor: pointer;
+}
+
+.header-menu a {
+    margin-right: 10px;
+}
