@@ -11485,10 +11485,11 @@ a.mdc-evolution-list-item {
   transform: rotate(0deg);
   transition: transform 150ms 0ms ease-out;
 }
-.mdc-collapse__header.mdc-collapse__header-active .mdc-list-item__text {
+
+.mdc-collapse__header-active .mdc-list-item__text {
   font-weight: 500;
 }
-.mdc-collapse__header.mdc-collapse__header-active .mdc-list-item__graphic {
+.mdc-collapse__header-active .mdc-list-item__graphic {
   transform: rotate(180deg);
 }
 
