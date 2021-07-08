@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../../src/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
+
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+                <div class="menu">
+                    <div><a href="./form.html">Form</a></div>
+                    <div><a href="./button.html">Button</a></div>
+                    <div><a href="./checkbox.html">Checkbox</a></div>
+                    <div><a href="./collapse.html">Collapse</a></div>
+                    <div><a href="./collapse-search.html">Collapse search</a></div>
+                    <div><a href="./data-table.html">Data table</a></div>
+                    <div><a href="./drawer.html"><b>Drawer</b></a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    Drawer
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/Drawer.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/drawer">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+                <pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yii\helpers\Url<span style="color: #339933;">;</span>
+<span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\Drawer<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #000088;">$drawer</span> <span style="color: #339933;">=</span> Drawer<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'header'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Control panel'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'headerIcon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'admin_panel_settings'</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'headerLink'</span> <span style="color: #339933;">=&gt;</span> Url<span style="color: #339933;">::</span><span style="color: #004000;">to</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'/'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+        <span style="color: #009900;">&#91;</span>
+            <span style="color: #0000ff;">'header'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Users'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+                <span style="color: #009900;">&#91;</span>
+                    <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'List of users'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group'</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'href'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'/user/list'</span>
+                <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+                <span style="color: #009900;">&#91;</span>
+                    <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Access rules'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'fact_check'</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'href'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'/rbac/assignment'</span>
+                <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#91;</span>
+            <span style="color: #0000ff;">'header'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Refs'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+                <span style="color: #009900;">&#91;</span>
+                    <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Reference list'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'featured_play_list'</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'href'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'/ref/index'</span>
+                <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#91;</span>
+            <span style="color: #0000ff;">'header'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Settings'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+                <span style="color: #009900;">&#91;</span>
+                    <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Settings'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'settings'</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'href'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'/settings/index'</span>
+                <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+                <span style="color: #009900;">&#91;</span>
+                    <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/drawer'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Feedback'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'feedback'</span><span style="color: #339933;">,</span>
+                    <span style="color: #0000ff;">'href'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'/feedback/index'</span>
+                <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span>
+    <span style="color: #009900;">&#93;</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #339933;">-&gt;</span><span style="color: #004000;">setSelected</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'/'</span> <span style="color: #339933;">.</span> Yii<span style="color: #339933;">::</span><span style="color: #000088;">$app</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">request</span><span style="color: #339933;">-&gt;</span><span style="color: #990000;">pathInfo</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'href'</span><span style="color: #009900;">&#41;</span>
+<span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'app-drawer'</span><span style="color: #009900;">&#41;</span>
+<span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'app-drawer'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'drawer'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">Samples</p>
+
+                <div class="sample">
+<aside id="app-drawer" class="mdc-drawer--dismissible mdc-drawer mdc-drawer--open">
+    <div class="mdc-drawer__header">
+        <h3><a class="mdc-drawer__title mdc-drawer__title-with-icon" href="#"><span
+                    class="material-icons mdc-drawer__title-icon">admin_panel_settings</span><span
+                    class="mdc-drawer__title-name">Control panel</span></a></h3>
+    </div>
+    <div class="mdc-drawer__content">
+        <nav id="list-60e72712ec4f0" class="mdc-list mdc-h__small mdc-fs__small">
+            <div class="group active">
+                <h4 class="mdc-list-group__subheader">Users</h4><a class="mdc-list-item" href="#"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">group</span><span
+                        class="mdc-list-item__text">List of users</span></a><a class="mdc-list-item"
+                    href="#" tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">fact_check</span><span
+                        class="mdc-list-item__text">Access rules</span></a>
+            </div>
+            <div class="group active">
+                <h4 class="mdc-list-group__subheader">Refs</h4><a class="mdc-list-item" href="#"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">featured_play_list</span><span
+                        class="mdc-list-item__text">Reference list</span></a>
+            </div>
+            <div class="group active">
+                <h4 class="mdc-list-group__subheader">Settings</h4><a class="mdc-list-item" href="#"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">settings</span><span
+                        class="mdc-list-item__text">Settings</span></a><a class="mdc-list-item" href="#"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">feedback</span><span
+                        class="mdc-list-item__text">Feedback</span></a>
+            </div>
+        </nav>
+    </div>
+</aside>
+                </div>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    app.controls.add('app-drawer', 'drawer', []);
+</script>
+
+</html>

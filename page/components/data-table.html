@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../../src/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
+
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+                <div class="menu">
+                    <div><a href="./form.html">Form</a></div>
+                    <div><a href="./button.html">Button</a></div>
+                    <div><a href="./checkbox.html">Checkbox</a></div>
+                    <div><a href="./collapse.html">Collapse</a></div>
+                    <div><a href="./collapse-search.html">Collapse search</a></div>
+                    <div><a href="./data-table.html"><b>Data table</b></a></div>
+                    <div><a href="./drawer.html">Drawer</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    Data table
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/DataTable.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/data-table">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-data-table">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\DataTable<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> DataTable<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'isAjaxRequest'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #000088;">$app</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">request</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">isAjax</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'user-list'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setGridView</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'dataProvider'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$dataProvider</span><span style="color: #339933;">,</span>        
+        <span style="color: #0000ff;">'columns'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'class'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'\yh\mdc\widget\grid\SerialColumn'</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'class'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'\yh\mdc\widget\grid\CheckboxColumn'</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'attribute'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'id'</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #0000ff;">'email:email'</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'user-list-rows'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'select'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'user-list'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'dataTable'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">addObject</span><span style="color: #009900;">&#40;</span>app.<span style="color: #660066;">utils</span>.<span style="color: #660066;">DataTableProcessing</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'user-list'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">Samples</p>
+
+                <div class="sample">
+<div id="user-list" class="mdc-data-table">
+    <div class="mdc-data-table__table-container">
+        <table class="mdc-data-table__table" aria-label="Data table">
+            <thead>
+                <tr class="mdc-data-table__header-row">
+                    <th class="mdc-data-table__header-cell mdc-data-table__cell-serial" role="columnheader" scope="col">
+                        #</th>
+                    <th class="mdc-data-table__header-cell mdc-data-table__header-cell--checkbox" role="columnheader"
+                        scope="col">
+                        <div class="mdc-data-table__header-row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value="">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </th>
+                    <th class="mdc-data-table__header-cell mdc-data-table__header-cell--with-sort  mdc-data-table__header-cell--sorted"
+                        role="columnheader" scope="col" data-column-id="id" aria-sort="ascending"
+                        link="">
+                        <div class="mdc-data-table__header-cell-wrapper">
+                            <div class="mdc-data-table__header-cell-label">Id</div><button
+                                class="mdc-data-table__sort-icon-button mdc-icon-button material-icons"
+                                aria-describedby="id-status-label" aria-label="Сортировка по Id">arrow_upward</button>
+                            <div id="id-status-label" class="mdc-data-table__sort-status-label" aria-hidden="true">Id
+                            </div>
+                        </div>
+                    </th>
+                    <th class="mdc-data-table__header-cell mdc-data-table__header-cell--with-sort" role="columnheader"
+                        scope="col" data-column-id="email" link="">
+                        <div class="mdc-data-table__header-cell-wrapper">
+                            <div class="mdc-data-table__header-cell-label">Email</div><button
+                                class="mdc-data-table__sort-icon-button mdc-icon-button material-icons"
+                                aria-describedby="email-status-label"
+                                aria-label="Сортировка по Email">arrow_upward</button>
+                            <div id="email-status-label" class="mdc-data-table__sort-status-label" aria-hidden="true">
+                                Email</div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="mdc-data-table__content">
+                <tr class="mdc-data-table__row" data-row-id="user-list-8" data-key="8">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">1</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-8">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">8</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:admin@example.ru">admin@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-9" data-key="9">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">2</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-9">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">9</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:user@example.ru">user@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-10" data-key="10">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">3</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-10">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">10</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Johnathon@example.ru">Johnathon@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-11" data-key="11">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">4</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-11">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">11</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Anthony@example.ru">Anthony@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-12" data-key="12">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">5</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-12">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">12</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Erasmo@example.ru">Erasmo@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-13" data-key="13">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">6</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-13">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">13</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Raleigh@example.ru">Raleigh@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-14" data-key="14">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">7</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-14">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">14</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Nancie@example.ru">Nancie@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-15" data-key="15">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">8</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-15">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">15</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Tama@example.ru">Tama@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-16" data-key="16">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">9</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-16">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">16</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Camellia@example.ru">Camellia@example.ru</a></td>
+                </tr>
+                <tr class="mdc-data-table__row" data-row-id="user-list-17" data-key="17">
+                    <td class="mdc-data-table__cell mdc-data-table__cell-serial">10</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                        <div class="mdc-data-table__row-checkbox mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" class="mdc-checkbox__native-control" name="" value=""
+                                aria-labelledby="user-list-17">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                    viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div>
+                    </td>
+                    <td class="mdc-data-table__cell">17</td>
+                    <td class="mdc-data-table__cell"><a href="mailto:Augustine@example.ru">Augustine@example.ru</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mdc-data-table__progress-indicator">
+        <div class="mdc-data-table__scrim"></div>
+        <div id="linearProgress-60e72193579d0"
+            class="mdc-data-table__linear-progress mdc-linear-progress mdc-linear-progress--indeterminate mdc-linear-progress--closed"
+            role="progressbar" aria-label="">
+            <div class="mdc-linear-progress__buffer">
+                <div class="mdc-linear-progress__buffer-bar"></div>
+            </div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar"><span
+                    class="mdc-linear-progress__bar-inner"></span></div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar"><span
+                    class="mdc-linear-progress__bar-inner"></span></div>
+        </div>
+    </div>
+
+    <div class="mdc-data-table__pagination mdc-data-table__pagination-trailing">
+        <div class="mdc-data-table__pagination-rows-per-page">
+            <div class="mdc-data-table__pagination-rows-per-page-label"></div>
+            <div class="mdc-form-field__label--inner">
+                <div id="user-list-rows"
+                    class="mdc-data-table__pagination-rows-per-page-select mdc-select mdc-select--outlined mdc-select--no-label mdc-h__exsmall mdc-fs__small">
+                    <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false"
+                        aria-labelledby="id-label-user-list-rows user-list-rows" tabindex="0" aria-disabled="false">
+                        <span class="mdc-notched-outline mdc-notched-outline--no-label"><span
+                                class="mdc-notched-outline__leading"></span><span
+                                class="mdc-notched-outline__trailing"></span></span><span
+                            class="mdc-select__selected-text-container"><span id="user-list-rows-text"
+                                class="mdc-select__selected-text">10</span></span><span
+                            class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic"
+                                viewBox="7 10 10 5" focusable="false">
+                                <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                                    points="7 10 12 15 17 10"></polygon>
+                                <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                                    points="7 15 12 10 17 15"></polygon>
+                            </svg></span></div>
+                    <div class="mdc-select__menu mdc-menu-surface--fullwidth mdc-menu mdc-menu-surface">
+                        <nav class="mdc-list mdc-h__small mdc-fs__small" role="listbox" aria-hidden="true"
+                            aria-orientation="vertical"><a class="mdc-list-item mdc-list-item--selected"
+                                aria-selected="true" data-value="10" tabindex="-1"><span
+                                    class="mdc-list-item__ripple"></span><span
+                                    class="mdc-list-item__text">10</span></a><a class="mdc-list-item" data-value="20"
+                                tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                                    class="mdc-list-item__text">20</span></a><a class="mdc-list-item" data-value="50"
+                                tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                                    class="mdc-list-item__text">50</span></a></nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-data-table__pagination-total">Показаны записи <b>1-10</b> из <b>14</b>.</div>
+        <div class="mdc-data-table__pagination-navigation"><button
+                class="mdc-icon-button material-icons mdc-data-table__pagination-button " disabled="disabled"><a
+                    href="#">first_page</a></button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button " disabled="disabled"><a
+                    href="#">chevron_left</a></button>
+            <button class="mdc-icon-button active " disabled="disabled"><a href="#">1</a></button>
+            <button class="mdc-icon-button"><a href="" data-page="1">2</a></button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button"><a
+                    href="" data-page="1">chevron_right</a></button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button"><a
+                    href="" data-page="1">last_page</a></button>
+        </div>
+    </div>
+</div>
+                </div>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    app.controls.add('user-list-rows', 'select', []);
+    app.controls.add('user-list', 'dataTable', []);        
+</script>
+
+</html>

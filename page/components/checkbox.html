@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../../src/site.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
+
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+                <div class="menu">
+                    <div><a href="./form.html">Form</a></div>
+                    <div><a href="./button.html">Button</a></div>
+                    <div><a href="./checkbox.html"><b>Checkbox</b></a></div>
+                    <div><a href="./collapse.html">Collapse</a></div>
+                    <div><a href="./collapse-search.html">Collapse search</a></div>
+                    <div><a href="./data-table.html">Data table</a></div>
+                    <div><a href="./drawer.html">Drawer</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                    <div><a href="">Form</a></div>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    Checkbox
+                    <div class="mdc-typography--subtitle2">
+                        <a
+                            href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/CheckBox.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/checkbox">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a
+                            href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\CheckBox<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> CheckBox<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Remember me'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> CheckBox<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Checkbox1'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'indeterminate'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'checkbox1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> CheckBox<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Checkbox2'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'enabled'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">false</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'checkbox1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>                
+
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'checkbox1'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">indeterminate</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'checkbox1'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">checked</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'checkbox2'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">indeterminate</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">Samples</p>
+
+                <div class="sample">
+                    <div class="mdc-form-field">
+                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" id="checkbox-60e70d1a3e351" class="mdc-checkbox__native-control" name="" value="1"
+                                checked="true">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div><label class="mdc-switch__label " for="checkbox-60e70d1a3e351">Remember me</label>
+                    </div>
+                    <div class="mdc-form-field">
+                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded mdc-checkbox--selected"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" id="checkbox1" class="mdc-checkbox__native-control" name="" value="">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div><label class="mdc-switch__label " for="checkbox1">Checkbox1</label>
+                    </div>
+                    <div class="mdc-form-field">
+                        <div class="mdc-checkbox mdc-checkbox--disabled mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded mdc-checkbox--selected"
+                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                            <input type="checkbox" id="checkbox2" class="mdc-checkbox__native-control" name="" value="" disabled="disabled"
+                                aria-checked="mixed">
+                            <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                            <div class="mdc-checkbox__ripple"></div>
+                        </div><label class="mdc-switch__label " for="checkbox2">Checkbox2</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+    <script>        
+        app.controls.add('checkbox-60e70d1a3e351', 'checkbox', []);
+        const ch1 = app.controls.add('checkbox1', 'checkbox', []);
+        const ch2 = app.controls.add('checkbox2', 'checkbox', []);
+
+        setTimeout(() => {
+            ch1.indeterminate = false;
+            ch1.checked = true;
+            ch2.indeterminate = true;
+        }, 1500);        
+    </script>
+</body>
+
+</html>

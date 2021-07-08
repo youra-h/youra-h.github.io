@@ -1,0 +1,51 @@
+<h6 class="mdc-typography--headline6">
+    Snackbar
+    <div class="mdc-typography--subtitle2">
+        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/SnackBar.php">
+            @see PHP class
+        </a>
+    </div>
+    <div class="mdc-typography--subtitle2">
+        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/snackbar">
+            @see JavaScript
+        </a>
+    </div>
+    <div class="mdc-typography--subtitle2">
+        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar">
+            @see Google package
+        </a>
+    </div>
+</h6>
+                
+<p class="mdc-typography--caption">PHP</p>
+
+<pre class="php" style="font-family:monospace;">Snackbar<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">''</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'closeButton'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Close'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'app-snackbar'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span></pre>
+
+<p class="mdc-typography--caption">JavaScript</p>
+                
+<pre class="javascript" style="font-family:monospace;">let snackbar <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'app-snackbar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text2'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #006600; font-style: italic;">//or</span>
+snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+                
+<div class="sample">
+    <div id="sample-snackbar" class="mdc-snackbar mdc-snackbar--action-baseline mdc-snackbar--open">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions"
+            style="min-width: 70%; max-width: 70%;">
+            <div class="mdc-snackbar__label">
+                <div>Text1</div>
+                <div>Text2</div>
+            </div>
+            <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                    class="mdc-button mdc-snackbar__action" style="display: none">
+                    <div class="mdc-button__ripple"></div><span class="mdc-button__label"></span>
+                </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                    title="Закрыть">close</button></div>
+        </div>
+    </div>
+</div>
