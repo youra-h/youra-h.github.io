@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../src/site.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
+
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    Form Login
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/ActiveForm.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/assets/utils/form-processing.js">
+                            @see JavaScript
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+                
+                <pre class="php" style="font-family:monospace;">use yh\mdc\ActiveForm<span style="color: #339933;">;</span><br><br><span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #000088;">$form</span> <span style="color: #339933;">=</span> ActiveForm<span style="color: #339933;">::</span><span style="color: #004000;">begin</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'id'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'loginform'</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?=</span> <span style="color: #000088;">$form</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">field</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$model</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'username'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">textInput</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'tabIndex'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'autocomplete'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'username'</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'required'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'property'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'autoFocus'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'label'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/login'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Введите логин'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_TOP</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'textSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'helper'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/login'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'email | логин'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?=</span> <span style="color: #000088;">$form</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">field</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$model</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'password'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">passwordInput</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'tabIndex'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'autocomplete'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'current-password'</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'required'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'property'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'label'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/login'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Введите пароль'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_TOP</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'textSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'icons'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'visibility'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'role'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'button'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'toggle'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'visibility_off'</span><span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'helper'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">''</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span>
+    <span style="color: #009900;">&#93;</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?=</span> <span style="color: #000088;">$form</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">field</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$model</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'rememberMe'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">checkbox</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+    <span style="color: #0000ff;">'tabIndex'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'property'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'label'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/login'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Запомнить меня'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+<span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?=</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span>
+        Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend/login'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Войти'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'spinner'</span> <span style="color: #339933;">=&gt;</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">SP_AUTO</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'tabIndex'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">4</span><span style="color: #009900;">&#93;</span>
+    <span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setOwner</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$form</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">gray</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">submit</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> ActiveForm<span style="color: #339933;">::</span><span style="color: #990000;">end</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span></pre>
+
+                    <p class="mdc-typography--caption">The script will be added automatically</p>
+
+                    <pre class="javascript" style="font-family:monospace;"><span style="color: #339933;">&lt;</span>script<span style="color: #339933;">&gt;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform-username'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'loginform'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform-password-visibility'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform-password'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'loginform'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform-rememberme'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'checkbox'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'loginform'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform-submit'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'button'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'loginform'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">addObject</span><span style="color: #009900;">&#40;</span>app.<span style="color: #660066;">utils</span>.<span style="color: #660066;">FormProcessing</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#123;</span><span style="color: #3366CC;">&quot;control&quot;</span><span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;submit&quot;</span><span style="color: #339933;">,</span><span style="color: #3366CC;">&quot;unblock&quot;</span><span style="color: #339933;">:</span><span style="color: #003366; font-weight: bold;">false</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #339933;">&lt;/</span>script<span style="color: #339933;">&gt;</span></pre>
+
+                <p class="mdc-typography--caption">Add script for form</p>
+
+<pre class="javascript"
+    style="font-family:monospace;"><span style="color: #006600; font-style: italic;">// In case of a successful answer</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loginform'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">onSuccess</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span>data<span style="color: #009900;">&#41;</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#123;</span>
+    location.<span style="color: #660066;">href</span> <span style="color: #339933;">=</span> data.<span style="color: #660066;">data</span>.<span style="color: #660066;">url</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #006600; font-style: italic;">// Password</span>
+let password <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;loginform-password&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+password.<span style="color: #660066;">minLength</span> <span style="color: #339933;">=</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">;</span>
+password.<span style="color: #660066;">trailingIcon</span>.<span style="color: #660066;">click</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">===</span> <span style="color: #3366CC;">&quot;text&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">&quot;password&quot;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">&quot;text&quot;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+    <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">focus</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> password.<span style="color: #660066;">trailingIcon</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">We get</p>
+                
+                <form id="loginform" class="active-form" action="#" method="post" novalidate="">
+                    <input type="hidden" name="_csrf-backend"
+                        value="LubDM_WLdZIjNNxnj6kISWl4pVBAqHIo9d1VNC0JddZ9lqVGs7881297pFX--EZkHyL2By__JxiUqTlcWTBFjg==">
+                    <div class="mdc-form-field__i mdc-form-field__label--top field-loginform-username ">
+                        <label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__large" for="loginform-username">Введите
+                            логин</label><label
+                            class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label mdc-h__large mdc-fs__large mdc-ripple-upgraded"
+                            style="--mdc-ripple-fg-size:212px; --mdc-ripple-fg-scale:1.73439; --mdc-ripple-fg-translate-start:154.075px, -81.8px; --mdc-ripple-fg-translate-end:71.4875px, -84px;"><span
+                                class="mdc-text-field__ripple"></span><input type="text" id="loginform-username"
+                                class="mdc-text-field__input" name="LoginForm[username]" autocomplete="username"
+                                required="" autofocus="" aria-controls="id-hint-username" aria-describedby="id-hint-username"><span
+                                class="mdc-line-ripple" style="transform-origin: 245.675px center;"></span></label>
+                        <div class="mdc-text-field-helper-line">
+                            <div id="id-hint-username"
+                                class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg">
+                                email | логин</div>
+                        </div>
+                    </div>
+                    <div class="mdc-form-field__i mdc-form-field__label--top field-loginform-password ">
+                        <label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__large" for="loginform-password">Введите
+                            пароль</label><label
+                            class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label mdc-h__large mdc-fs__large mdc-text-field--with-trailing-icon mdc-ripple-upgraded"><span
+                                class="mdc-text-field__ripple"></span><input type="password" id="loginform-password"
+                                class="mdc-text-field__input" name="LoginForm[password]" value=""
+                                autocomplete="current-password" required="" aria-controls="id-hint-password" minlength="5"><i
+                                id="loginform-password-visibility"
+                                class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                                role="button" aria-pressed="false"
+                                style="--mdc-ripple-fg-size:22px; --mdc-ripple-fg-scale:1.72727; --mdc-ripple-left:8px; --mdc-ripple-top:8px;"><i
+                                    class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">visibility_off</i><i
+                                    class="material-icons mdc-icon-button__icon">visibility</i></i><span
+                                class="mdc-line-ripple"></span></label>
+                        <div class="mdc-text-field-helper-line">
+                            <div id="id-hint-password"
+                                class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                                aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <div class="mdc-form-field__i field-loginform-rememberme">
+                        <div class="mdc-form-field">
+                            <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                                style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                                <input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox"
+                                    id="loginform-rememberme" class="mdc-checkbox__native-control" name="LoginForm[rememberMe]"
+                                    value="1" checked="true">
+                                <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+                                        </path>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                                <div class="mdc-checkbox__ripple"></div>
+                            </div><label class="mdc-switch__label " for="loginform-rememberme">Запомнить меня</label>
+                        </div>
+                    </div>
+                    <div class="mdc-form-field__i">
+                        <button type="submit" id="loginform-submit"
+                            class="mdc-button mdc-button--raised mdc-button--gray mdc-ripple-upgraded" >
+                            <div class="mdc-button__ripple"></div><span class="mdc-button__label">Войти</span><span
+                                id="spinner-60e6a09c0001c" class="mdc-spinner mdc-spinner-medium" show="auto"></span>
+                        </button>
+                    </div>
+                
+                </form>
+
+                <p class="mdc-typography--caption">And server response</p>
+
+                <pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">class</span> Controller
+<span style="color: #009900;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">public</span> static <span style="color: #000000; font-weight: bold;">function</span> encode<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$type</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'success'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$result</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span>
+            <span style="color: #0000ff;">'data'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$data</span><span style="color: #339933;">,</span>        
+            <span style="color: #0000ff;">'status'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$type</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> Json<span style="color: #339933;">::</span><span style="color: #004000;">encode</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$result</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> actionLogin<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #009900;">&#123;</span>
+        <span style="color: #666666; font-style: italic;">// ...`</span>
+        <span style="color: #666666; font-style: italic;">//Validate ajax Login form</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>Yii<span style="color: #339933;">::</span><span style="color: #000088;">$app</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">request</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">isAjax</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>validate<span style="color: #009900;">&#40;</span><span style="color: #000088;">$model</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>                
+                <span style="color: #b1b100;">return</span> <span style="color: #000000; font-weight: bold;">self</span><span style="color: #339933;">::</span><span style="color: #004000;">encode</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'url'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #000088;">$app</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">getUser</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">getReturnUrl</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span> <span style="color: #b1b100;">else</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #666666; font-style: italic;">// return self::modelError($model);</span>
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #666666; font-style: italic;">// ...</span>
+    <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span></pre>
+
+                
+
+
+
+
+
+
+                <h6 class="mdc-typography--headline6">
+                    Button
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/Button.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/button">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-button">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+                <pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\Button<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Button1'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'spinner'</span> <span style="color: #339933;">=&gt;</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">SP_AUTO</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'button1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">gray</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Button2'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'button2'</span><span style="color: #009900;">&#41;</span>    
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Button<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Button3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'button3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">raised</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+                <pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'button1'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">disabled</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span></pre>
+
+                <div class="sample">
+                    <button type="button" id="button1" class="mdc-button mdc-button--raised mdc-button--gray mdc-ripple-upgraded"
+                        style="margin-right: 10px; width: 134px; justify-content: normal;" disabled="disabled">
+                        <div class="mdc-button__ripple"></div><span class="mdc-button__label">Button1</span><span id="spinner-60e6d22bc2837"
+                            class="mdc-spinner mdc-spinner-medium mdc-spinner--show mdc-spinner--show__visible" show="auto"></span>
+                    </button>
+                    <button type="button" id="button2" class="mdc-button mdc-ripple-upgraded" style="margin-right: 10px">
+                        <div class="mdc-button__ripple"></div><span class="mdc-button__label">Button2</span>
+                    </button>
+                    <button type="button" id="button3" class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+                        <div class="mdc-button__ripple"></div><span class="mdc-button__label">Button3</span>
+                    </button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h6 class="mdc-typography--headline6">
+                    Snackbar
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/SnackBar.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/snackbar">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+                
+                <p class="mdc-typography--caption">PHP</p>
+
+                <pre class="php" style="font-family:monospace;">Snackbar<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">''</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'closeButton'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Close'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'app-snackbar'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span></pre>
+
+                <p class="mdc-typography--caption">JavaScript</p>
+                
+                <pre class="javascript" style="font-family:monospace;">let snackbar <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'app-snackbar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text2'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #006600; font-style: italic;">//or</span>
+snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+                
+                <div class="sample">
+                <div id="sample-snackbar" class="mdc-snackbar mdc-snackbar--action-baseline mdc-snackbar--open">
+                    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions" style="min-width: 70%; max-width: 70%;">
+                        <div class="mdc-snackbar__label">
+                            <div>Text1</div>
+                            <div>Text2</div>
+                        </div>
+                        <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                                class="mdc-button mdc-snackbar__action" style="display: none">
+                                <div class="mdc-button__ripple"></div><span class="mdc-button__label"></span>
+                            </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                                title="Закрыть">close</button></div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+    <div id="app-snackbar" class="mdc-snackbar mdc-snackbar--action-baseline" style="position: fixed;">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+            <div class="mdc-snackbar__label">
+                <div>Text1</div>
+                <div>Text2</div>
+            </div>
+            <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                    class="mdc-button mdc-snackbar__action" style="display: none">
+                    <div class="mdc-button__ripple"></div><span class="mdc-button__label"></span>
+                </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                    title="Закрыть">close</button></div>
+        </div>
+    </div>
+
+    <script>
+
+        app.controls.add('loginform-username', 'textField', [], 'loginform');
+        app.controls.add('loginform-password-visibility', 'iconButton', []);
+        app.controls.add('loginform-password', 'textField', [], 'loginform');
+        app.controls.add('loginform-rememberme', 'checkbox', [], 'loginform');
+        let submit = app.controls.add('loginform-submit', 'button', [], 'loginform');   
+
+        let snackbar = app.controls.add('app-snackbar', 'snackbar', []);
+        snackbar.trailing = true;
+        snackbar.size('30%');
+        
+        let password = app.controls.item("loginform-password");
+            password.minLength = 5;
+            password.trailingIcon.click(function () {
+                if (this.parent.type === "text") {
+                    this.parent.type = "password";
+                } else {
+                    this.parent.type = "text";
+                }
+                this.parent.focus();
+            }, password.trailingIcon);
+
+        let form = document.getElementById("loginform");
+        form.addEventListener("submit", event => {
+            event.preventDefault();            
+            submit.disabled = true;
+            setTimeout(() => {
+                submit.disabled = false;
+                snackbar.showMessage('Login failed');
+            }, 1500);
+        }, true);
+
+    </script>
+</body>
+
+</html>
