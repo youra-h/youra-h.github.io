@@ -22,7 +22,7 @@ a {
 }
 
 .material-icons {
-    font-family: 'Material Icons Outlined';
+    font-family: 'Material Icons';
 }
 
 .header-menu a {
@@ -66,10 +66,6 @@ form {
     color: white;
     text-transform: uppercase;
     padding: 16px;
-}
-
-#sample-snackbar {
-    position: initial;
 }
 
 #app-drawer {

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../../src/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
+
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+                <div class="menu">
+                    <div><a href="./form.html">Form</a></div>
+                    <div><a href="./button.html">Button</a></div>
+                    <div><a href="./checkbox.html">Checkbox</a></div>
+                    <div><a href="./collapse.html">Collapse</a></div>
+                    <div><a href="./collapse-search.html">Collapse search</a></div>
+                    <div><a href="./data-table.html">Data table</a></div>
+                    <div><a href="./drawer.html">Drawer</a></div>
+                    <div><a href="./grid.html">Grid</a></div>
+                    <div><a href="./icon-button.html">Icon button</a></div>
+                    <div><a href="./left-app-bar.html">Left app bar</a></div>
+                    <div><a href="./linear-progress.html">Linear progress</a></div>
+                    <div><a href="./list-item.html">List item</a></div>
+                    <div><a href="./menu.html">Menu</a></div>
+                    <div><a href="./radio.html"><b>Radio</b></a></div>
+                    <div><a href="./select.html">Select</a></div>
+                    <div><a href="./snackbar.html">SnackBar</a></div>
+                    <div><a href="./spinner.html">Spinner</a></div>
+                    <div><a href="./textfield.html">Textfield</a></div>
+                    <div><a href="./typography.html">Typography</a></div>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    Radio
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/Radio.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/radio">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-radio">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\Radio<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio1'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group1'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio2'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group1'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio2'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio3'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group1'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio4'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group2'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio4'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio5'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group2'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio5'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Radio<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Radio6'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'name'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'group2'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'radio6'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio1'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio2'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio3'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio4'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio5'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio6'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'radio'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio3'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">checked</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'radio6'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">disabled</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">Samples</p>
+
+                <div class="sample">
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio1" class="mdc-radio__native-control" name="group1" value="">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio1">Radio1</label>
+</div>
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio2" class="mdc-radio__native-control" name="group1" value="1" checked="true">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio2">Radio2</label>
+</div>
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio3" class="mdc-radio__native-control" name="group1" value="">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio3">Radio3</label>
+</div><br>
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio4" class="mdc-radio__native-control" name="group2" value="1" checked="true">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio4">Radio4</label>
+</div>
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio5" class="mdc-radio__native-control" name="group2" value="">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio5">Radio5</label>
+</div>
+<div class="mdc-form-field">
+    <div class="mdc-radio mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+        style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+        <input type="radio" id="radio6" class="mdc-radio__native-control" name="group2" value="">
+        <div class="mdc-radio__background">
+            <div class="mdc-radio__outer-circle"></div>
+            <div class="mdc-radio__inner-circle"></div>
+        </div>
+        <div class="mdc-radio__ripple"></div>
+    </div><label class="mdc-switch__label " for="radio6">Radio6</label>
+</div>
+                </div>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    app.controls.add('radio1', 'radio', []);
+    app.controls.add('radio2', 'radio', []);
+    app.controls.add('radio3', 'radio', []);
+    app.controls.add('radio4', 'radio', []);
+    app.controls.add('radio5', 'radio', []);
+    app.controls.add('radio6', 'radio', []);
+
+    app.controls.item('radio3').checked = true;
+    app.controls.item('radio6').disabled = true;
+</script>
+
+</html>

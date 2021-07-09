@@ -1,51 +1,171 @@
-<h6 class="mdc-typography--headline6">
-    Snackbar
-    <div class="mdc-typography--subtitle2">
-        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/SnackBar.php">
-            @see PHP class
-        </a>
-    </div>
-    <div class="mdc-typography--subtitle2">
-        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/snackbar">
-            @see JavaScript
-        </a>
-    </div>
-    <div class="mdc-typography--subtitle2">
-        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar">
-            @see Google package
-        </a>
-    </div>
-</h6>
-                
-<p class="mdc-typography--caption">PHP</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<pre class="php" style="font-family:monospace;">Snackbar<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">''</span><span style="color: #009900;">&#41;</span>
-    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'closeButton'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Close'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
-    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'app-snackbar'</span><span style="color: #009900;">&#41;</span>
-    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span></pre>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../dist/mdc/material-components-web.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./../../dist/mdc/material-components-web.min.css">
+    <link rel="stylesheet" href="./../../src/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>YH Projects</title>
+</head>
 
-<p class="mdc-typography--caption">JavaScript</p>
-                
-<pre class="javascript" style="font-family:monospace;">let snackbar <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'app-snackbar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
-snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
-snackbar.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text2'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
-snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
-<span style="color: #006600; font-style: italic;">//or</span>
-snackbar.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
-                
-<div class="sample">
-    <div id="sample-snackbar" class="mdc-snackbar mdc-snackbar--action-baseline mdc-snackbar--open">
-        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions"
-            style="min-width: 70%; max-width: 70%;">
-            <div class="mdc-snackbar__label">
-                <div>Text1</div>
-                <div>Text2</div>
+<body>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-2">
+                <div class="menu">
+                    <div><a href="./form.html">Form</a></div>
+                    <div><a href="./button.html">Button</a></div>
+                    <div><a href="./checkbox.html">Checkbox</a></div>
+                    <div><a href="./collapse.html">Collapse</a></div>
+                    <div><a href="./collapse-search.html">Collapse search</a></div>
+                    <div><a href="./data-table.html">Data table</a></div>
+                    <div><a href="./drawer.html">Drawer</a></div>
+                    <div><a href="./grid.html">Grid</a></div>
+                    <div><a href="./icon-button.html">Icon button</a></div>
+                    <div><a href="./left-app-bar.html">Left app bar</a></div>
+                    <div><a href="./linear-progress.html">Linear progress</a></div>
+                    <div><a href="./list-item.html">List item</a></div>
+                    <div><a href="./menu.html">Menu</a></div>
+                    <div><a href="./radio.html">Radio</a></div>
+                    <div><a href="./select.html">Select</a></div>
+                    <div><a href="./snackbar.html"><b>SnackBar</b></a></div>
+                    <div><a href="./spinner.html">Spinner</a></div>
+                    <div><a href="./textfield.html">Textfield</a></div>
+                    <div><a href="./typography.html">Typography</a></div>
+                </div>
             </div>
-            <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
-                    class="mdc-button mdc-snackbar__action" style="display: none">
-                    <div class="mdc-button__ripple"></div><span class="mdc-button__label"></span>
-                </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
-                    title="Закрыть">close</button></div>
+            <div class="mdc-layout-grid__cell--span-8">
+                <h4 class="mdc-typography--headline4">
+                    Projects
+                    <div>
+                        <a href="https://github.com/youra-h?tab=repositories" class="mdc-typography--subtitle2">
+                            github.com/youra-h
+                        </a>
+                    </div>
+                </h4>
+
+                <div class="header-menu">
+                    <a href="" class="mdc-typography--body "><b>Yii2 MDC</b></a>
+                </div>
+                <hr>
+
+                <h6 class="mdc-typography--headline6">
+                    SnackBar
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/yii2-material-design-components/blob/master/src/components/SnackBar.php">
+                            @see PHP class
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/youra-h/MDC-web-template/tree/master/components/snackbar">
+                            @see JavaScript
+                        </a>
+                    </div>
+                    <div class="mdc-typography--subtitle2">
+                        <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar">
+                            @see Google package
+                        </a>
+                    </div>
+                </h6>
+
+                <p class="mdc-typography--caption">PHP</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\SnackBar<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Snackbar<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">''</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'closeButton'</span> <span style="color: #339933;">=&gt;</span> Yii<span style="color: #339933;">::</span><span style="color: #004000;">t</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'backend'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Close'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'captionButton'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Alt button'</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'leading'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>        
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'app-snackbar'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+
+                <p class="mdc-typography--caption">JavaScript</p>
+
+<pre class="javascript" style="font-family:monospace;"><span style="color: #000066; font-weight: bold;">const</span> sb <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'app-snackbar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+sb.<span style="color: #660066;">size</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'30%'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+sb.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+sb.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text2'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+sb.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+let callback <span style="color: #339933;">=</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#123;</span>
+    sb.<span style="color: #660066;">unlisten</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'MDCSnackbar:closed'</span><span style="color: #339933;">,</span> callback<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    sb.<span style="color: #660066;">trailing</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+    sb.<span style="color: #660066;">showMessage</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Text1'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+&nbsp;
+sb.<span style="color: #660066;">listen</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'MDCSnackbar:closed'</span><span style="color: #339933;">,</span> callback<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+                <p class="mdc-typography--caption">Samples</p>
+
+                <div class="sample">
+<div class="mdc-snackbar mdc-snackbar--action-baseline mdc-snackbar--open" style="position: initial;">
+    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions" style="min-width: 70%; max-width: 30%;">
+        <div class="mdc-snackbar__label">
+            <div>Text1</div>
+            <div>Text2</div>
         </div>
+        <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                class="mdc-button mdc-snackbar__action">
+                <div class="mdc-button__ripple"></div><span class="mdc-button__label">Alt button</span>
+            </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                title="Close">close</button></div>
     </div>
 </div>
+
+<div class="mdc-snackbar mdc-snackbar--open" style="position: initial;">
+    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions" style="min-width: 70%; max-width: 30%;">
+        <div class="mdc-snackbar__label">Text1</div>
+        <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                class="mdc-button mdc-snackbar__action">
+                <div class="mdc-button__ripple"></div><span class="mdc-button__label">Alt button</span>
+            </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                title="Close">close</button></div>
+    </div>
+</div>
+                </div>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-2">
+            </div>
+        </div>
+    </div>
+
+    <div id="app-snackbar" class="mdc-snackbar mdc-snackbar--leading">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions" style="min-width: 50%; max-width: 30%;">
+            <div class="mdc-snackbar__label">Text1</div>
+            <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                    class="mdc-button mdc-snackbar__action">
+                    <div class="mdc-button__ripple"></div><span class="mdc-button__label">Alt button</span>
+                </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                    title="Close">close</button></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const sb = app.controls.add('app-snackbar','snackbar',[]);
+    
+    sb.size('30%');
+    sb.add('Text1');
+    sb.add('Text2');
+    sb.showMessage();
+
+    let callback = () => {
+        sb.unlisten('MDCSnackbar:closed', callback);
+        sb.trailing = true;
+        sb.showMessage('Text1');
+    };
+
+    sb.listen('MDCSnackbar:closed', callback);
+</script>
+
+</html>
