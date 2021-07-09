@@ -75,17 +75,165 @@
 
                 <p class="mdc-typography--caption">PHP</p>
 
-
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\base\Vars<span style="color: #339933;">;</span>
+<span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\TextField<span style="color: #339933;">;</span>
+<span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\ItemIconButton<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Phone'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">NORMAL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'helper'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Required entry phone in the format +7 999 999 99 99'</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'required'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'useNativeMessage'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'buttonClear'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'icons'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'phone'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'position'</span> <span style="color: #339933;">=&gt;</span> ItemIconButton<span style="color: #339933;">::</span><span style="color: #004000;">LEADING</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'role'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'button'</span><span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'prefix'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'+7'</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'suffix'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'🤡'</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField outlined'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">NORMAL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'template'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">OUTLINED</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'helper'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Min length 6 symbols'</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'minLength'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'useNativeMessage'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'icons'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'visibility'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'role'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'button'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'toggle'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'visibility_off'</span><span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField2'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField label top'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">SMALL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'template'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">OUTLINED</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_TOP</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'buttonClear'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField label left'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">EXTRA_SMALL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> TextField<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_LEFT</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelSize'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">EXTRA_SMALL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'buttonClear'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'TextField4'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
 
                 <p class="mdc-typography--caption">JavaScript</p>
 
-
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'textField-60e88af6c261e-phone'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'textField-60e88af6c261e-clear'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'TextField1'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #3366CC;">&quot;trailingIcon.clear&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;required&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+    <span style="color: #3366CC;">&quot;helperMessage.useNativeMessage&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'textField-60e88af6c34e9-visibility'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'TextField2'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span> <span style="color: #3366CC;">&quot;minLength&quot;</span><span style="color: #339933;">:</span> <span style="color: #CC0000;">6</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;helperMessage.useNativeMessage&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'textField-60e88af6c3562-clear'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'TextField3'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span> <span style="color: #3366CC;">&quot;trailingIcon.clear&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'textField-60e88af6c36f3-clear'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'iconButton'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'TextField4'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'textField'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span> <span style="color: #3366CC;">&quot;trailingIcon.clear&quot;</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+let TextField2 <span style="color: #339933;">=</span> app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;TextField2&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+TextField2.<span style="color: #660066;">minLength</span> <span style="color: #339933;">=</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">;</span>
+TextField2.<span style="color: #660066;">trailingIcon</span>.<span style="color: #660066;">click</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">===</span> <span style="color: #3366CC;">&quot;text&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">&quot;password&quot;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">type</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">&quot;text&quot;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+    <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">parent</span>.<span style="color: #660066;">focus</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> TextField2.<span style="color: #660066;">trailingIcon</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
                 <p class="mdc-typography--caption">Samples</p>
 
                 <div class="sample">
+<div class="wrapper " style='width: 400px;'>
 
+    <div class="mdc-form-field__label--inner"><label
+            class="mdc-text-field mdc-text-field--filled mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon mdc-ripple-upgraded"><span
+                class="mdc-text-field__ripple"></span><i id="textField-60e88af6c261e-phone"
+                class="mdc-text-field__icon mdc-text-field__icon--leading mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                role="button" tabindex="0" aria-pressed="false"
+                style="--mdc-ripple-fg-size:26px; --mdc-ripple-fg-scale:1.69231; --mdc-ripple-left:9px; --mdc-ripple-top:9px;">phone</i><span
+                id="id-label-TextField1" class="mdc-floating-label mdc-floating-label--required">Phone</span><span
+                class="mdc-text-field__affix mdc-text-field__affix--prefix">+7</span><input type="text" id="TextField1"
+                class="mdc-text-field__input" name="TextField1" aria-labelledby="id-label-TextField1"
+                aria-controls="id-hint-TextField1" required=""><span
+                class="mdc-text-field__affix mdc-text-field__affix--suffix">🤡</span><i
+                id="textField-60e88af6c261e-clear"
+                class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                role="button" tabindex="0" aria-pressed="false"
+                style="--mdc-ripple-fg-size:26px; --mdc-ripple-fg-scale:1.69231; --mdc-ripple-left:9px; --mdc-ripple-top:9px;">clear</i><span
+                class="mdc-line-ripple"></span></label>
+        <div class="mdc-text-field-helper-line">
+            <div id="id-hint-TextField1"
+                class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                aria-hidden="true">Required entry phone in the format +7 999 999 99 99</div>
+        </div>
+    </div><br>
+    <div class="mdc-form-field__label--inner"><label
+            class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"><span
+                class="mdc-notched-outline mdc-notched-outline--upgraded"><span
+                    class="mdc-notched-outline__leading"></span><span class="mdc-notched-outline__notch"><span
+                        id="id-label-TextField2" class="mdc-floating-label" style="">TextField
+                        outlined</span></span><span class="mdc-notched-outline__trailing"></span></span><input
+                type="text" id="TextField2" class="mdc-text-field__input" name="TextField2"
+                aria-labelledby="id-label-TextField2" aria-controls="id-hint-TextField2" minlength="6"><i
+                id="textField-60e88af6c34e9-visibility"
+                class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                role="button" tabindex="0" aria-pressed="false"
+                style="--mdc-ripple-fg-size:26px; --mdc-ripple-fg-scale:1.69231; --mdc-ripple-left:9px; --mdc-ripple-top:9px;"><i
+                    class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">visibility_off</i><i
+                    class="material-icons mdc-icon-button__icon">visibility</i></i></label>
+        <div class="mdc-text-field-helper-line">
+            <div id="id-hint-TextField2"
+                class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                aria-hidden="true">Min length 5 symbols</div>
+        </div>
+    </div><br>
+    <div class="mdc-form-field__label--top"><label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__large"
+            for="TextField3">TextField label top</label><label
+            class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label mdc-h__small mdc-text-field--with-trailing-icon"><span
+                class="mdc-notched-outline mdc-notched-outline--no-label"><span
+                    class="mdc-notched-outline__leading"></span><span class="mdc-notched-outline__notch"></span><span
+                    class="mdc-notched-outline__trailing"></span></span><input type="text" id="TextField3"
+                class="mdc-text-field__input" name=""><i id="textField-60e88af6c3562-clear"
+                class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                role="button" tabindex="0" aria-pressed="false"
+                style="--mdc-ripple-fg-size:18px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:6px; --mdc-ripple-top:6px;">clear</i></label>
+    </div><br>
+    <div class="mdc-form-field__label--left">
+        <div class="mdc-form-field__with-label"><label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__exsmall"
+                for="TextField4">TextField label left</label><label
+                class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label mdc-h__exsmall mdc-text-field--with-trailing-icon mdc-ripple-upgraded"><span
+                    class="mdc-text-field__ripple"></span><input type="text" id="TextField4"
+                    class="mdc-text-field__input" name=""><i id="textField-60e88af6c36f3-clear"
+                    class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                    role="button" tabindex="0" aria-pressed="false"
+                    style="--mdc-ripple-fg-size:16px; --mdc-ripple-fg-scale:1.75; --mdc-ripple-left:6px; --mdc-ripple-top:6px;">clear</i><span
+                    class="mdc-line-ripple"></span></label></div>
+    </div>
+
+</div>
                 </div>
 
             </div>
@@ -97,7 +245,28 @@
 </body>
 
 <script>
+    app.controls.add('textField-60e88af6c261e-phone', 'iconButton', []);
+    app.controls.add('textField-60e88af6c261e-clear', 'iconButton', []);
+    app.controls.add('TextField1', 'textField', { "trailingIcon.clear": true, "required": true, "helperMessage.useNativeMessage": true });
+    app.controls.add('textField-60e88af6c34e9-visibility', 'iconButton', []);
+    app.controls.add('TextField2', 'textField', { "minLength": 6, "helperMessage.useNativeMessage": true });
+    app.controls.add('textField-60e88af6c3562-clear', 'iconButton', []);
+    app.controls.add('TextField3', 'textField', { "trailingIcon.clear": true });
+    app.controls.add('textField-60e88af6c36f3-clear', 'iconButton', []);
+    app.controls.add('TextField4', 'textField', { "trailingIcon.clear": true });
 
+    let TextField2 = app.controls.item("TextField2");
+        TextField2.minLength = 5;
+        TextField2.trailingIcon.click(function () {
+            if (this.parent.type === "text") {
+                this.parent.type = "password";
+            } else {
+                this.parent.type = "text";
+            }
+            this.parent.focus();
+        }, TextField2.trailingIcon);
 </script>
+
+
 
 </html>

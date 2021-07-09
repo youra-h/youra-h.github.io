@@ -75,17 +75,220 @@
 
                 <p class="mdc-typography--caption">PHP</p>
 
-
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\Select<span style="color: #339933;">;</span>
+<span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\base\Vars<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Select filled'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">NORMAL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span>
+            <span style="color: #cc66cc;">20</span><span style="color: #339933;">,</span>
+            <span style="color: #cc66cc;">30</span><span style="color: #339933;">,</span>
+            <span style="color: #cc66cc;">40</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setOptions</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'style'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'margin-bottom: 10px'</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'select1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Select outlined'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">NORMAL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'template'</span> <span style="color: #339933;">=&gt;</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">OUTLINED</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 1'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'favorite'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">0</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 2'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'settings'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setOptions</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'style'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'margin-bottom: 10px'</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'select2'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Select label top'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">SMALL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'template'</span> <span style="color: #339933;">=&gt;</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">OUTLINED</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_TOP</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 1'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'favorite'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">0</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 2'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'settings'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setOptions</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'style'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'margin-bottom: 10px'</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'select3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Select label left'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setProperty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'height'</span> <span style="color: #339933;">=&gt;</span> Vars<span style="color: #339933;">::</span><span style="color: #004000;">EXTRA_SMALL</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'labelTemplate'</span> <span style="color: #339933;">=&gt;</span> Select<span style="color: #339933;">::</span><span style="color: #004000;">ALIGN_LEFT</span><span style="color: #339933;">,</span>
+        <span style="color: #0000ff;">'items'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">&#91;</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 1'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'favorite'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">0</span>
+            <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#91;</span>
+                <span style="color: #0000ff;">'text'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'Text 2'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'icon'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'settings'</span><span style="color: #339933;">,</span>
+                <span style="color: #0000ff;">'value'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setOptions</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>
+        <span style="color: #0000ff;">'style'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">'margin-bottom: 10px'</span>
+    <span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'select4'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
 
                 <p class="mdc-typography--caption">JavaScript</p>
 
-
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'select1'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'select'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'select2'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'select'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'select3'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'select'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'select4'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'select'</span><span style="color: #339933;">,</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
                 <p class="mdc-typography--caption">Samples</p>
 
                 <div class="sample">
-
+                    <div style="width: 400px;">
+<div class="mdc-form-field__label--inner">
+    <div id="select1" class="mdc-select mdc-select--filled" style="margin-bottom: 10px">
+        <div class="mdc-select__anchor mdc-ripple-upgraded" role="button" aria-haspopup="listbox" aria-expanded="false"
+            aria-labelledby="id-label-select1 select1" tabindex="0" aria-disabled="false"><span
+                class="mdc-select__ripple"></span><span id="id-label-select1" class="mdc-floating-label">Select
+                filled</span><span class="mdc-select__selected-text-container"><span id="select1-text"
+                    class="mdc-select__selected-text"></span></span><span class="mdc-select__dropdown-icon"><svg
+                    class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                    <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                        points="7 10 12 15 17 10"></polygon>
+                    <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                        points="7 15 12 10 17 15"></polygon>
+                </svg></span><span class="mdc-line-ripple"></span></div>
+        <div class="mdc-select__menu mdc-menu-surface--fullwidth mdc-menu mdc-menu-surface">
+            <nav class="mdc-list mdc-h__small mdc-fs__small" role="listbox" aria-hidden="true"
+                aria-orientation="vertical"><a class="mdc-list-item" data-value="0" tabindex="-1"><span
+                        class="mdc-list-item__ripple"></span><span class="mdc-list-item__text">10</span></a><a
+                    class="mdc-list-item" data-value="1" tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__text">20</span></a><a class="mdc-list-item" data-value="2"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__text">30</span></a><a class="mdc-list-item" data-value="3"
+                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__text">40</span></a></nav>
+        </div>
+    </div>
+</div>
+<div class="mdc-form-field__label--inner">
+    <div id="select2" class="mdc-select mdc-select--outlined" style="margin-bottom: 10px">
+        <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false"
+            aria-labelledby="id-label-select2 select2" tabindex="0" aria-disabled="false"><span
+                class="mdc-notched-outline mdc-notched-outline--upgraded"><span
+                    class="mdc-notched-outline__leading"></span><span class="mdc-notched-outline__notch"><span
+                        id="id-label-select2" class="mdc-floating-label" style="">Select outlined</span></span><span
+                    class="mdc-notched-outline__trailing"></span></span><span
+                class="mdc-select__selected-text-container"><span id="select2-text"
+                    class="mdc-select__selected-text"></span></span><span class="mdc-select__dropdown-icon"><svg
+                    class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                    <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                        points="7 10 12 15 17 10"></polygon>
+                    <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                        points="7 15 12 10 17 15"></polygon>
+                </svg></span></div>
+        <div class="mdc-select__menu mdc-menu-surface--fullwidth mdc-menu mdc-menu-surface">
+            <nav class="mdc-list mdc-h__small mdc-fs__small" role="listbox" aria-hidden="true"
+                aria-orientation="vertical"><a class="mdc-list-item" data-value="0" tabindex="-1"><span
+                        class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic material-icons"
+                        aria-hidden="true">favorite</span><span class="mdc-list-item__text">Text 1</span></a><a
+                    class="mdc-list-item" data-value="1" tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">settings</span><span
+                        class="mdc-list-item__text">Text 2</span></a></nav>
+        </div>
+    </div>
+</div>
+<div class="mdc-form-field__label--top"><label class="mdc-typography--subtitle1 mdc-outer-label " for="select3">Select
+        label top</label>
+    <div id="select3" class="mdc-select mdc-select--outlined mdc-select--no-label mdc-h__small"
+        style="margin-bottom: 10px">
+        <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false"
+            aria-labelledby="id-label-select3 select3" tabindex="0" aria-disabled="false"><span
+                class="mdc-notched-outline mdc-notched-outline--no-label"><span
+                    class="mdc-notched-outline__leading"></span><span class="mdc-notched-outline__notch"></span><span
+                    class="mdc-notched-outline__trailing"></span></span><span
+                class="mdc-select__selected-text-container"><span id="select3-text"
+                    class="mdc-select__selected-text"></span></span><span class="mdc-select__dropdown-icon"><svg
+                    class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                    <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                        points="7 10 12 15 17 10"></polygon>
+                    <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                        points="7 15 12 10 17 15"></polygon>
+                </svg></span></div>
+        <div class="mdc-select__menu mdc-menu-surface--fullwidth mdc-menu mdc-menu-surface">
+            <nav class="mdc-list mdc-h__small mdc-fs__small" role="listbox" aria-hidden="true"
+                aria-orientation="vertical"><a class="mdc-list-item" data-value="0" tabindex="-1"><span
+                        class="mdc-list-item__ripple"></span><span class="mdc-list-item__graphic material-icons"
+                        aria-hidden="true">favorite</span><span class="mdc-list-item__text">Text 1</span></a><a
+                    class="mdc-list-item" data-value="1" tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                        class="mdc-list-item__graphic material-icons" aria-hidden="true">settings</span><span
+                        class="mdc-list-item__text">Text 2</span></a></nav>
+        </div>
+    </div>
+</div>
+<div class="mdc-form-field__label--left">
+    <div class="mdc-form-field__with-label"><label class="mdc-typography--subtitle1 mdc-outer-label "
+            for="select4">Select label left</label>
+        <div id="select4" class="mdc-select mdc-select--filled mdc-select--no-label mdc-h__exsmall"
+            style="margin-bottom: 10px">
+            <div class="mdc-select__anchor mdc-ripple-upgraded" role="button" aria-haspopup="listbox"
+                aria-expanded="false" aria-labelledby="id-label-select4 select4" tabindex="0" aria-disabled="false"
+                style="--mdc-ripple-fg-size:132px; --mdc-ripple-fg-scale:1.76221; --mdc-ripple-fg-translate-start:138px, -49.2px; --mdc-ripple-fg-translate-end:44px, -49px;">
+                <span class="mdc-select__ripple"></span><span class="mdc-select__selected-text-container"><span
+                        id="select4-text" class="mdc-select__selected-text">Text 1</span></span><span
+                    class="mdc-select__dropdown-icon"><svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5"
+                        focusable="false">
+                        <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                            points="7 10 12 15 17 10"></polygon>
+                        <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                            points="7 15 12 10 17 15"></polygon>
+                    </svg></span><span class="mdc-line-ripple" style="transform-origin: 204px center;"></span></div>
+            <div class="mdc-select__menu mdc-menu-surface--fullwidth mdc-menu mdc-menu-surface"
+                style="transform-origin: center top; left: 0px; top: 34px; max-height: 106px;">
+                <nav class="mdc-list mdc-h__small mdc-fs__small" role="listbox" aria-hidden="true"
+                    aria-orientation="vertical"><a class="mdc-list-item mdc-list-item--selected" data-value="0"
+                        tabindex="0" aria-selected="true"><span class="mdc-list-item__ripple"></span><span
+                            class="mdc-list-item__graphic material-icons" aria-hidden="true">favorite</span><span
+                            class="mdc-list-item__text">Text 1</span></a><a class="mdc-list-item" data-value="1"
+                        tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                            class="mdc-list-item__graphic material-icons" aria-hidden="true">settings</span><span
+                            class="mdc-list-item__text">Text 2</span></a></nav>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
                 </div>
 
             </div>
@@ -97,7 +300,10 @@
 </body>
 
 <script>
-
+    app.controls.add('select1', 'select', []);
+    app.controls.add('select2', 'select', []);
+    app.controls.add('select3', 'select', []);
+    app.controls.add('select4', 'select', []);
 </script>
 
 </html>

@@ -70,17 +70,49 @@
 
                 <p class="mdc-typography--caption">PHP</p>
 
-
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">use</span> yh\mdc\components\Spinner<span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'size'</span> <span style="color: #339933;">=&gt;</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">EXSMALL</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'spinner1'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'size'</span> <span style="color: #339933;">=&gt;</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">SMALL</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'spinner2'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'size'</span> <span style="color: #339933;">=&gt;</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">MEDIUM</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'enabled'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'spinner3'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'&lt;br&gt;'</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">echo</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">one</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'size'</span> <span style="color: #339933;">=&gt;</span> Spinner<span style="color: #339933;">::</span><span style="color: #004000;">LARGE</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'enabled'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setId</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'spinner4'</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
 
                 <p class="mdc-typography--caption">JavaScript</p>
-
+<pre class="javascript" style="font-family:monospace;">app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'spinner1'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'spinner'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'spinner2'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'spinner'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'spinner3'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'spinner'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'spinner4'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'spinner'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;spinner1&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">show</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+app.<span style="color: #660066;">controls</span>.<span style="color: #660066;">item</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;spinner2&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">show</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
 
 
                 <p class="mdc-typography--caption">Samples</p>
 
                 <div class="sample">
+<div class="wrapper ">
 
+    <span id="spinner1"
+        class="mdc-spinner mdc-spinner-extra-small mdc-spinner--show mdc-spinner--show__visible"></span><br><span
+        id="spinner2"
+        class="mdc-spinner mdc-spinner-small mdc-spinner--show mdc-spinner--show__visible"></span><br><span
+        id="spinner3"
+        class="mdc-spinner mdc-spinner-medium mdc-spinner--show mdc-spinner--show__visible"></span><br><span
+        id="spinner4" class="mdc-spinner mdc-spinner-large mdc-spinner--show mdc-spinner--show__visible"></span>
+
+</div>
                 </div>
 
             </div>
