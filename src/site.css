@@ -83,15 +83,38 @@ h4 {
 }
 
 .support {
-    background-color: #1c2132;
+    background-color: #f8f8f8;
     border-radius: 5px;
-    color: #51a980;
+    color: #898989;
     padding: 20px;
     line-height: 1.3;
     margin-top: 2rem;
+    height: 100%;
     width: 400px;
 }
 
-.support .alt {
-    color: #a4b4c6;
+.list-components {
+    padding-top: 20px;
+}
+
+.list-components div {
+    padding: 4px 0;
+}
+
+.list-components .name {
+    display: inline-block;
+    width: 150px;
+    font-weight: 700;
+}
+
+.list-components .done {
+    color: rgb(73, 151, 125);
+}
+
+.list-components .not_yet {
+    color: rgb(168, 168, 168);
+}
+
+.list-components .dev {
+    color: rgb(146, 110, 44);
 }
