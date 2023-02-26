@@ -1,0 +1,262 @@
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">    
+    <title>AdminPanel - вход в панель управления </title>
+
+    <link href="./../src/css/fonts-nunito.css" rel="stylesheet">
+    <link href="./../src/css/fonts-materialicons-outlined.css" rel="stylesheet">
+    <link href="./../dist/mdc/material-components-web.min.css" rel="stylesheet">
+    <link href="./../src/css/main.css" rel="stylesheet">
+    <link href="./../src/css/guest.css" rel="stylesheet">    
+</head>
+
+<body>
+
+    <div class="wrapper mdc-layout-grid">
+
+
+        <div class="mdc-layout-grid__inner">
+            <div class="data-content mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--span-12-tablet">
+                <div class="header">
+                    <span class="material-icons">admin_panel_settings</span>
+                    <span class="title mdc-typography--headline5">
+                        Панель управления </span>
+                </div>
+                <div class="data-box">
+                    <form id="loginform" class="active-form" action="mdc-admin-panel-users.html" method="post" novalidate="">
+                        <input type="hidden" name="_csrf-backend"
+                            value="iVHrOQwObO9mYIbpTyASEYlPfeQT-3Wk6mB_K9h4EQmkHth-QUYzmhY57YosaEco6jgcrGCdN-W8LUljiC9zPQ==">
+                        <div class="mdc-form-field__i mdc-form-field__label--top field-loginform-username ">
+                            <label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__large"
+                                for="loginform-username">Введите логин</label><label
+                                class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label mdc-h__large mdc-fs__large mdc-ripple-upgraded"><span
+                                    class="mdc-text-field__ripple"></span><input type="text" id="loginform-username"
+                                    class="mdc-text-field__input" name="LoginForm[username]" tabindex="1"
+                                    autocomplete="username" required="" autofocus="" aria-controls="id-hint-username"
+                                    aria-describedby="id-hint-username"><span class="mdc-line-ripple"></span></label>
+                            <div class="mdc-text-field-helper-line">
+                                <div id="id-hint-username"
+                                    class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg">
+                                    email | логин</div>
+                            </div>
+                        </div>
+                        <div class="mdc-form-field__i mdc-form-field__label--top field-loginform-password ">
+                            <label class="mdc-typography--subtitle1 mdc-outer-label mdc-fs__large"
+                                for="loginform-password">Введите пароль</label><label
+                                class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label mdc-h__large mdc-fs__large mdc-text-field--with-trailing-icon mdc-ripple-upgraded"><span
+                                    class="mdc-text-field__ripple"></span><input type="password" id="loginform-password"
+                                    class="mdc-text-field__input" name="LoginForm[password]" value="" tabindex="2"
+                                    autocomplete="current-password" required="" aria-controls="id-hint-password"
+                                    minlength="5"><i id="loginform-password-visibility"
+                                    class="mdc-text-field__icon mdc-text-field__icon--trailing mdc-icon-button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                                    role="button" tabindex="0" aria-pressed="false"
+                                    style="--mdc-ripple-fg-size:22px; --mdc-ripple-fg-scale:1.72727; --mdc-ripple-left:8px; --mdc-ripple-top:8px;"><i
+                                        class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">visibility_off</i><i
+                                        class="material-icons mdc-icon-button__icon">visibility</i></i><span
+                                    class="mdc-line-ripple"></span></label>
+                            <div class="mdc-text-field-helper-line">
+                                <div id="id-hint-password"
+                                    class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                                    aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="mdc-form-field__i field-loginform-rememberme">
+                            <div class="mdc-form-field">
+                                <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                                    style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                                    <input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox"
+                                        id="loginform-rememberme" class="mdc-checkbox__native-control"
+                                        name="LoginForm[rememberMe]" value="1" checked="true" tabindex="3">
+                                    <div class="mdc-checkbox__background"><svg class="mdc-checkbox__checkmark"
+                                            viewBox="0 0 24 24">
+                                            <path class="mdc-checkbox__checkmark-path" fill="none"
+                                                d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                        </svg>
+                                        <div class="mdc-checkbox__mixedmark"></div>
+                                    </div>
+                                    <div class="mdc-checkbox__ripple"></div>
+                                </div><label class="mdc-switch__label " for="loginform-rememberme">Запомнить
+                                    меня</label>
+                            </div>
+                        </div>
+                        <div class="mdc-form-field__i">
+                            <button type="submit" id="loginform-submit"
+                                class="mdc-button mdc-button--raised mdc-button--gray mdc-ripple-upgraded" tabindex="4">
+                                <div class="mdc-button__ripple"></div><span class="mdc-button__label">Войти</span><span
+                                    id="spinner-63fb5e2a61da6" class="mdc-spinner mdc-spinner-medium"
+                                    show="auto"></span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="footer">
+                    <div class="mdc-menu-surface--anchor" style="width: 156.812px;">
+                        <div id="locale-menu" class="mdc-menu mdc-menu-surface">
+                            <nav class="mdc-list mdc-h__small mdc-fs__small" role="menu" aria-hidden="true"
+                                aria-orientation="vertical"><a class="mdc-list-item" data-value="en-EN"
+                                    tabindex="-1"><span class="mdc-list-item__ripple"></span><span
+                                        class="mdc-list-item__text">EN - English</span></a></nav>
+                        </div>
+                    </div>
+                    <div class="mdc-typography--caption">
+                        <span id="locale-spinner" class="mdc-spinner mdc-spinner-small"
+                            style="margin: -2px 0 0 -20px;"></span> <a id="locale-link" href="#"
+                            class="locale-link">RU</a>
+                        <span>
+                            © 2023 AdminPanel, Inc. </span>
+                    </div>
+                </div>
+                <div id="app-snackbar" class="mdc-snackbar mdc-snackbar__absolute">
+                    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions"
+                        style="min-width: 70%; max-width: 70%;">
+                        <div class="mdc-snackbar__label"></div>
+                        <div class="mdc-snackbar__actions" aria-atomic="true"><button type="button"
+                                class="mdc-button mdc-snackbar__action" style="display: none">
+                                <div class="mdc-button__ripple"></div><span class="mdc-button__label"></span>
+                            </button><button type="button" class="mdc-icon-button mdc-snackbar__dismiss material-icons"
+                                title="Закрыть">close</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="picture-content mdc-layout-grid__cell--span-7">
+                <div class="box">
+                    <div class="box-relative">
+                        <div class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="178.000000pt"
+                                height="178.000000pt" viewBox="0 0 178.000000 178.000000"
+                                preserveAspectRatio="xMidYMid meet">
+                                <metadata>
+                                    Created by potrace 1.10, written by Peter Selinger 2001-2011
+                                </metadata>
+                                <g transform="translate(0.000000,178.000000) scale(0.050000,-0.050000)" fill="#ffffff"
+                                    stroke="none">
+                                    <path
+                                        d="M1611 3542 c-6 -11 19 -86 56 -168 l68 -149 -702 -1582 -703 -1583 -165 0 c-133 0 -165 -6 -165 -30 0 -26 210 -30 1770 -30 1538 0 1770 4 1770 29 0 23 -36 31 -165 35 l-165 6 -695 1560 c-382 858 -694 1572 -695 1587 0 14 28 90 62 167 44 100 55 147 40 162 -27 27 -25 28 -96 -113 l-59 -117 -54 122 c-53 118 -78 143 -102 104z m84 -1681 c-25 -39 -57 -93 -71 -121 -14 -27 -41 -70 -60 -95 l-35 -45 -152 155 -152 155 252 567 253 567 5 -556 c6 -548 5 -556 -40 -627z m375 607 l248 -558 -153 -155 -154 -155 -105 165 -105 165 -1 558 c0 307 5 554 11 548 6 -6 122 -262 259 -568z m-700 -808 c187 -188 166 -182 246 -70 66 94 103 114 105 55 0 -25 9 -19 30 20 44 80 80 68 162 -55 90 -136 65 -141 261 54 100 100 172 157 182 145 14 -15 382 -834 497 -1104 l28 -65 -360 0 -359 0 -39 89 c-131 295 -560 297 -703 2 l-44 -91 -357 0 -357 0 100 225 c55 124 173 389 262 590 89 201 168 365 175 365 6 0 84 -72 171 -160z m549 -819 c144 -74 170 -147 171 -481 l0 -290 -315 -6 -315 -5 0 292 c0 459 168 638 459 490z m-539 -531 l0 -250 -480 0 c-264 0 -480 7 -480 15 0 8 46 121 103 250 l103 235 377 0 377 0 0 -250z m1641 20 c54 -121 98 -231 98 -245 1 -19 -108 -25 -479 -25 l-480 0 0 250 0 251 381 -6 381 -5 99 -220z">
+                                    </path>
+                                    <path
+                                        d="M716 348 c-60 -45 -90 -81 -83 -99 12 -31 25 -27 122 45 l65 48 89 -64 c99 -70 95 -71 241 51 99 84 35 114 -69 32 l-81 -64 -84 61 c-102 75 -86 76 -200 -10z">
+                                    </path>
+                                    <path
+                                        d="M2368 397 c-14 -24 143 -176 182 -176 11 0 55 27 98 59 81 62 84 61 184 -14 54 -40 66 -43 87 -17 20 24 5 41 -87 102 l-110 74 -82 -65 -82 -65 -78 62 c-87 71 -92 72 -112 40z">
+                                    </path>
+                                    <path
+                                        d="M2223 3326 c-152 -75 -212 -279 -129 -439 123 -238 480 -212 577 42 103 270 -186 526 -448 397z m290 -80 c64 -41 113 -159 101 -237 -50 -309 -494 -272 -494 41 0 186 232 302 393 196z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <!--Waves Container-->
+                        <div class="waves-box">
+                            <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+                                preserveAspectRatio="none" shape-rendering="auto">
+                                <defs>
+                                    <path id="gentle-wave"
+                                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                                    </path>
+                                </defs>
+                                <g class="parallax">
+                                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+                                </g>
+                            </svg>
+                        </div>
+                        <!--Waves end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <script src="./../src/js/jquery.js"></script>
+    <script src="./../src/js/yii.js"></script>
+    <script src="./../src/js/yii.validation.js"></script>
+    <script src="./../src/js/yii.activeForm.js"></script>
+    <script src="./../dist/mdc/material-components-web.min.js"></script>
+    <script src="./../dist/utils.min.js"></script>
+    <script src="./../src/js/main.js"></script>
+    <script src="./../src/js/guest.js"></script>
+    <script>app.controls.add('loginform-username', 'textField', [], 'loginform');
+        app.controls.add('loginform-password-visibility', 'iconButton', []);
+        app.controls.add('loginform-password', 'textField', [], 'loginform');
+        app.controls.add('loginform-rememberme', 'checkbox', [], 'loginform');
+        app.controls.add('loginform-submit', 'button', [], 'loginform');
+        // app.controls.addObject(app.utils.FormProcessing('loginform', { "control": "submit", "unblock": false }));
+        app.controls.add('locale-menu', 'menu', { "values": ["en-EN"] });
+        app.controls.add('locale-spinner', 'spinner', []);
+        app.controls.add('app-snackbar', 'snackbar', []);</script>
+    <script>
+    jQuery(function ($) {
+            jQuery('#loginform').yiiActiveForm([{
+                "id": "loginform-username",
+                "name": "username",
+                "container": ".field-loginform-username",
+                "input": "#loginform-username",
+                "error": false,
+                "validateOnChange": false,
+                "validate": function (attribute, value, messages, deferred, $form) {
+                    yii.validation.required(value, messages, {
+                        "message": "Необходимо заполнить «Логин»."
+                    });
+                },
+                "updateAriaInvalid": false
+            },
+            {
+                "id": "loginform-password",
+                "name": "password",
+                "container": ".field-loginform-password",
+                "input": "#loginform-password",
+                "error": false,
+                "validateOnChange": false,
+                "validate": function (attribute, value, messages, deferred, $form) {
+                    yii.validation.required(value, messages, {
+                        "message": "Необходимо заполнить «Пароль»."
+                    });
+                    yii.validation.string(value, messages, {
+                        "message": "Значение «Пароль» должно быть строкой.",
+                        "min": 5,
+                        "tooShort": "Значение «Пароль» должно содержать минимум 5 символа.",
+                        "skipOnEmpty": 1
+                    });
+                },
+                "updateAriaInvalid": false
+            },
+            {
+                "id": "loginform-rememberme",
+                "name": "rememberMe",
+                "container": ".field-loginform-rememberme",
+                "input": "#loginform-rememberme",
+                "error": false,
+                "validateOnChange": false,
+                "validate": function (attribute, value, messages, deferred, $form) {
+                    yii.validation.boolean(value, messages, {
+                        "trueValue": "1",
+                        "falseValue": "0",
+                        "message": "Значение «Remember Me» должно быть равно «1» или «0».",
+                        "skipOnEmpty": 1
+                    });
+                },
+                "updateAriaInvalid": false
+            }], {
+                "errorCssClass": "",
+                "successCssClass": "",
+                "validatingCssClass": ""
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
